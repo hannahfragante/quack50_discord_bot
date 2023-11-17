@@ -99,6 +99,21 @@ module.exports = async (client, message) => {
                             inline: true,
                         },
                         {
+                            name: "Questions Answred",
+                            value: player.questions_answered.toString(),
+                            inline: true,
+                        },
+                        {
+                            name: "Hack Offs Won",
+                            value: player.battles_won.toString(),
+                            inline: true,
+                        },
+                        {
+                            name: "# of Hack Offs",
+                            value: player.battle_count.toString(),
+                            inline: true,
+                        },
+                        {
                             name: "Active Duck",
                             value: `${activeDuckStats["name"]}\nlevel: ${activeDuckStats["level"]}\nhp: ${activeDuckStats["hp"]}\nduplicates: ${activeDuck["duplicates"]}\ndamage: ${activeDuckStats["damage"]}\nrecoil: ${activeDuckStats["recoil"]}\ntank damage: ${activeDuckStats["tank_damage"]}\nheal: ${activeDuckStats["heal"]}`,
                         }

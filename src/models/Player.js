@@ -21,6 +21,18 @@ const playerSchema = new Schema({
         type: Number,
         default: 0,
     },
+    questions_answered:{
+        type: Number,
+        default: 0,
+    },
+    battle_count:{
+        type: Number,
+        default: 0,
+    },
+    battles_won:{
+        type: Number,
+        default: 0,
+    },
     ducks: {
         type: Array,
         default: [

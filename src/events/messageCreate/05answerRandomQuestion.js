@@ -114,7 +114,9 @@ module.exports = async (client, message) => {
 
                                 }
                             }
-
+                            //update #questions answred by player
+                            player.questions_answered += 1
+                            await player.save()
                             //updater current question in database to answered=true
                             currentQuestion.answered = true;
                             // save databse
