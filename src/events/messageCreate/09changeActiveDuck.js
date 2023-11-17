@@ -33,13 +33,11 @@ module.exports = async (client, message) => {
             for (let i = 0; i < player.ducks.length; i++) {
                 let duck = {
                     name: "",
-                    hp: 0,
                     level: 0,
                     duplicates: 0,
                     active: false,
                 };
                 duck["name"] = player.ducks[i]["name"];
-                duck["hp"] = player.ducks[i]["hp"];
                 duck["level"] = player.ducks[i]["level"];
                 duck["duplicates"] = player.ducks[i]["duplicates"];
                 duck["active"] = player.ducks[i]["active"];
