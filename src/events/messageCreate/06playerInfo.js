@@ -2,6 +2,7 @@ const custom_commands = require("../../custom_commands/customCommands.js");
 const { Client, Message, EmbedBuilder } = require("discord.js");
 const Player = require("../../models/Player.js");
 const Duck = require("../../models/Duck.js");
+const duck_multipliers = require('../../global_constants/duckLevelMultiplier.js')
 /**
  *
  * @param {Client} client
@@ -51,21 +52,9 @@ module.exports = async (client, message) => {
                     img: message.author.avatarURL(),
                 };
                 if (activeDuckDatabase) {
-                    let level = activeDuck["level"] + activeDuck["duplicates"];
-                    let multiplier;
-                    if (level == 1) {
-                        multiplier = 0;
-                    } else if (level == 2) {
-                        multiplier = 0.2;
-                    } else if (level == 3) {
-                        multiplier = 0.3;
-                    } else if (level == 4) {
-                        multiplier = 0.5;
-                    } else if (level == 5) {
-                        multiplier = 0.7;
-                    } else if (level >= 6) {
-                        multiplier = 1;
-                    }
+                    let level = activeDuck["level"]
+                    let multiplier = duck_multipliers[level.toString()];
+
                     activeDuckStats["name"] = activeDuckDatabase.name;
                     activeDuckStats["level"] = level;
                     activeDuckStats["hp"] =
