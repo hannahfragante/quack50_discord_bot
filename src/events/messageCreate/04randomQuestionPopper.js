@@ -82,7 +82,9 @@ module.exports = async (client, message) => {
                     },
                     {
                         name: `\nHow to answer`,
-                        value: `type command \`dd -answer <your answer>\` where \`<your answer>\` is a single letter from the choices above`
+                        value: `
+                        *Multiple Choice:* \`dd -answer <letter>\` WITHOUT the \`<>\`
+                        *Free Response/output*: \`dd -answer <output>\` WITH the \`<>\``
                     }
                 );
         } else {
@@ -109,7 +111,9 @@ module.exports = async (client, message) => {
                     },
                     {
                         name: `\nHow to answer`,
-                        value: `type command \`dd -answer <your answer>\` where \`<your answer>\` is a single letter from the choices above`
+                        value: `
+                        *Multiple Choice:* \`dd -answer <letter>\` WITHOUT the \`<>\`
+                        *Free Response/output*: \`dd -answer <output>\` WITH the \`<>\``
                     }
                 );
         }
@@ -207,7 +211,9 @@ module.exports = async (client, message) => {
                                 },
                                 {
                                     name: `\nHow to answer`,
-                                    value: `type command \`dd -answer <your answer>\` where \`<your answer>\` is a single letter from the choices above`
+                                    value: `
+                                    *Multiple Choice:* \`dd -answer <letter>\` WITHOUT the \`<>\`
+                                    *Free Response/output*: \`dd -answer <output>\` WITH the \`<>\``
                                 }
                             );
                     } else {
@@ -234,7 +240,9 @@ module.exports = async (client, message) => {
                                 },
                                 {
                                     name: `\nHow to answer`,
-                                    value: `type command \`dd -answer <your answer>\` where \`<your answer>\` is a single letter from the choices above`
+                                    value: `
+                                    *Multiple Choice:* \`dd -answer <letter>\` WITHOUT the \`<>\`
+                                    *Free Response/output*: \`dd -answer <output>\` WITH the \`<>\``
                                 }
                             );
                     }

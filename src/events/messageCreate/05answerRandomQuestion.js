@@ -44,7 +44,8 @@ module.exports = async (client, message) => {
                     // check if user input had an answer choice
                     if (answerList[2]) {
                         // check if user answer input is correct
-                        if (answerList[2] === currentQuestion.answer) {
+                        const parsed_answer = answerList.slice(2).join(" ")
+                        if (parsed_answer === currentQuestion.answer) {
                             // TODO: update player xp and/or level and title
                             // TODO: change currentQuestion answered to true
 
