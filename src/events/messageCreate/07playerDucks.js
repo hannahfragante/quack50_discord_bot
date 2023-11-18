@@ -68,21 +68,11 @@ module.exports = async (client, message) => {
                         duckStats["name"] = databaseDuck.name;
                         duckStats["level"] = level;
                         duckStats["duplicates"] = player.ducks[i]["duplicates"];
-                        duckStats["hp"] =
-                            databaseDuck.base_hp +
-                            databaseDuck.base_hp * multiplier;
-                        duckStats["damage"] =
-                            databaseDuck.base_damage +
-                            databaseDuck.base_damage * multiplier;
-                        duckStats["recoil"] =
-                            databaseDuck.base_recoil +
-                            databaseDuck.base_recoil * multiplier;
-                        duckStats["tank_damage"] =
-                            databaseDuck.base_tank_damage +
-                            databaseDuck.base_tank_damage * multiplier;
-                        duckStats["heal"] =
-                            databaseDuck.base_heal +
-                            databaseDuck.base_heal * multiplier;
+                        duckStats["hp"] = Math.ceil(databaseDuck.base_hp * multiplier);
+                        duckStats["damage"] = Math.ceil(databaseDuck.base_damage * multiplier);
+                        duckStats["recoil"] = Math.ceil(databaseDuck.base_recoil * multiplier);
+                        duckStats["tank_damage"] = Math.ceil(databaseDuck.base_tank_damage * multiplier);
+                        duckStats["heal"] = Math.ceil(databaseDuck.base_heal * multiplier);
                         duckStats["img"] = databaseDuck.img;
 
                         playerDucks.push(duckStats);

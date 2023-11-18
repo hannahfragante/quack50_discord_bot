@@ -57,22 +57,12 @@ module.exports = async (client, message) => {
 
                     activeDuckStats["name"] = activeDuckDatabase.name;
                     activeDuckStats["level"] = level;
-                    activeDuckStats["hp"] =
-                        activeDuckDatabase.base_hp +
-                        activeDuckDatabase.base_hp * multiplier;
-                    activeDuckStats["damage"] =
-                        activeDuckDatabase.base_damage +
-                        activeDuckDatabase.base_damage * multiplier;
-                    activeDuckStats["recoil"] =
-                        activeDuckDatabase.base_recoil +
-                        activeDuckDatabase.base_recoil * multiplier;
-                    activeDuckStats["tank_damage"] =
-                        activeDuckDatabase.base_tank_damage +
-                        activeDuckDatabase.base_tank_damage * multiplier;
-                    activeDuckStats["heal"] =
-                        activeDuckDatabase.base_heal +
-                        activeDuckDatabase.base_heal * multiplier;
-                    activeDuckStats["img"] = activeDuckDatabase.img;
+                    activeDuckStats["hp"] =  Math.ceil(activeDuckDatabase.base_hp * multiplier);
+                    activeDuckStats["damage"] =  Math.ceil(activeDuckDatabase.base_damage * multiplier);
+                    activeDuckStats["recoil"] =  Math.ceil(activeDuckDatabase.base_recoil * multiplier);
+                    activeDuckStats["tank_damage"] =  Math.ceil(activeDuckDatabase.base_tank_damage * multiplier);
+                    activeDuckStats["heal"] =  Math.ceil(activeDuckDatabase.base_heal * multiplier);
+                    activeDuckStats["img"] =  activeDuckDatabase.img;
 
                     // img = activeDuckDatabase.img;
                 }
@@ -104,12 +94,12 @@ module.exports = async (client, message) => {
                             inline: true,
                         },
                         {
-                            name: "Hack Offs Won",
+                            name: "Quack Offs Won",
                             value: player.battles_won.toString(),
                             inline: true,
                         },
                         {
-                            name: "# of Hack Offs",
+                            name: "# of Quack Offs",
                             value: player.battle_count.toString(),
                             inline: true,
                         },
