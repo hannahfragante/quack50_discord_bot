@@ -36,7 +36,7 @@ module.exports = async (client, message) => {
         //chooses 1 random set of questions above
         let randomLanguage = Math.floor(Math.random() * 3);
         // chooses random question from chosen question set, right now there are only 5 questions each
-        let randomQuestion = Math.floor(Math.random() * 5);
+        let randomQuestion = Math.floor(Math.random() * questions[randomLanguage]["questions"].length);
 
         let chosenQuestion =
             questions[randomLanguage]["questions"][randomQuestion];
@@ -65,6 +65,11 @@ module.exports = async (client, message) => {
                 .setColor("Yellow")
                 .addFields(
                     {
+                        name: "Language",
+                        value: chosenQuestion["language"],
+                        inline: true,
+                    },
+                    {
                         name: "Difficulty",
                         value: chosenQuestion["difficulty"],
                         inline: true,
@@ -84,7 +89,7 @@ module.exports = async (client, message) => {
                         name: `\nHow to answer`,
                         value: `
                         *Multiple Choice:* \`dd -answer <letter>\` WITHOUT the \`<>\`
-                        *Free Response/output*: \`dd -answer <output>\` WITH the \`<>\``
+                        *Free Response/output*: \`dd -answer <output>\` WITHOUT the \`<>\``
                     }
                 );
         } else {
@@ -93,6 +98,11 @@ module.exports = async (client, message) => {
                 .setDescription("A new question has popped up!")
                 .setColor("Yellow")
                 .addFields(
+                    {
+                        name: "Language",
+                        value: chosenQuestion["language"],
+                        inline: true,
+                    },
                     {
                         name: "Difficulty",
                         value: chosenQuestion["difficulty"],
@@ -113,7 +123,7 @@ module.exports = async (client, message) => {
                         name: `\nHow to answer`,
                         value: `
                         *Multiple Choice:* \`dd -answer <letter>\` WITHOUT the \`<>\`
-                        *Free Response/output*: \`dd -answer <output>\` WITH the \`<>\``
+                        *Free Response/output*: \`dd -answer <output>\` WITHOUT the \`<>\``
                     }
                 );
         }
@@ -194,6 +204,11 @@ module.exports = async (client, message) => {
                             .setColor("Yellow")
                             .addFields(
                                 {
+                                    name: "Language",
+                                    value: currentQuestion.language,
+                                    inline: true,
+                                },
+                                {
                                     name: "Difficulty",
                                     value: currentQuestion.difficulty,
                                     inline: true,
@@ -213,7 +228,7 @@ module.exports = async (client, message) => {
                                     name: `\nHow to answer`,
                                     value: `
                                     *Multiple Choice:* \`dd -answer <letter>\` WITHOUT the \`<>\`
-                                    *Free Response/output*: \`dd -answer <output>\` WITH the \`<>\``
+                                    *Free Response/output*: \`dd -answer <output>\` WITHOUT the \`<>\``
                                 }
                             );
                     } else {
@@ -222,6 +237,11 @@ module.exports = async (client, message) => {
                             .setDescription("A new question has popped up!")
                             .setColor("Yellow")
                             .addFields(
+                                {
+                                    name: "Language",
+                                    value: currentQuestion.language,
+                                    inline: true,
+                                },
                                 {
                                     name: "Difficulty",
                                     value: currentQuestion.difficulty,
@@ -242,7 +262,7 @@ module.exports = async (client, message) => {
                                     name: `\nHow to answer`,
                                     value: `
                                     *Multiple Choice:* \`dd -answer <letter>\` WITHOUT the \`<>\`
-                                    *Free Response/output*: \`dd -answer <output>\` WITH the \`<>\``
+                                    *Free Response/output*: \`dd -answer <output>\` WITHOUT the \`<>\``
                                 }
                             );
                     }
@@ -268,6 +288,7 @@ module.exports = async (client, message) => {
                     currentQuestion.choices = chosenQuestion["choices"];
                     currentQuestion.answer = chosenQuestion["answer"];
                     currentQuestion.difficulty = chosenQuestion["difficulty"];
+                    currentQuestion.language = chosenQuestion["language"];
                     currentQuestion.answered = false;
 
                     // send the new question for every n messages in a channel
@@ -292,6 +313,7 @@ module.exports = async (client, message) => {
                         choices: chosenQuestion["choices"],
                         answer: chosenQuestion["answer"],
                         difficulty: chosenQuestion["difficulty"],
+                        difficulty: chosenQuestion["language"],
                     });
 
                     // send the new question for every n messages in a channel

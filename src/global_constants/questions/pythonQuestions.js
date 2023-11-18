@@ -20,6 +20,7 @@ module.exports = {
             },
             answer: `c`,
             difficulty: "easy",
+            language: `python`
         },
         {
             id: 2,
@@ -36,6 +37,7 @@ module.exports = {
             },
             answer: `c`,
             difficulty: "easy",
+            language: `python`
         },
         {
             id: 3,
@@ -52,6 +54,7 @@ module.exports = {
             },
             answer: `b`,
             difficulty: "easy",
+            language: `python`
         },
         {
             id: 4,
@@ -73,6 +76,7 @@ module.exports = {
             },
             answer: `b`,
             difficulty: "easy",
+            language: `python`
         },
         {
             id: 5,
@@ -87,6 +91,7 @@ module.exports = {
             },
             answer: `d`,
             difficulty: "easy",
+            language: `python`
         },
     ],
 };
