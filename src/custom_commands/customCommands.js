@@ -6,5 +6,6 @@ module.exports = {
     ducks: ["-d", "-ducks"],
     change_active_duck: ["-active"],
     tame: ['-tame', '-t'],
-    hackoff_answer: ['yes', 'no']
+    commands: ['-commands'],
+    quack50: ['-quack50']
 };
