@@ -1,4 +1,4 @@
-const {Client, Interaction, ApplicationCommandOptionType} = require('discord.js')
+const {Client, Interaction, ApplicationCommandOptionType, EmbedBuilder} = require('discord.js')
 const Player = require("../../models/Player.js");
 const Duck = require("../../models/Duck.js")
 const duck_multipliers = require('../../global_constants/duckLevelMultiplier.js')
@@ -30,7 +30,6 @@ module.exports = {
          *   
          * 
          * ***/
-        console.log(interaction.member.nickname)
         const targetUser = interaction.options.get('target-user')
 
         const initiator_query = {
@@ -104,6 +103,7 @@ module.exports = {
                 recoil: Math.ceil(initiator_active_base_stats.base_recoil * duck_multipliers[initiator_active.level.toString()]),
                 tank_damge: Math.ceil(initiator_active_base_stats.base_recoil * duck_multipliers[initiator_active.level.toString()]),
                 heal: Math.ceil(initiator_active_base_stats.base_heal * duck_multipliers[initiator_active.level.toString()]),
+                img: initiator_active_base_stats.img
             }
 
             let target_user_duck = {
@@ -114,6 +114,7 @@ module.exports = {
                 recoil: Math.ceil(target_user_active_base_stats.base_recoil * duck_multipliers[target_user_active.level.toString()]),
                 tank_damge: Math.ceil(target_user_active_base_stats.base_recoil * duck_multipliers[target_user_active.level.toString()]),
                 heal: Math.ceil(target_user_active_base_stats.base_heal * duck_multipliers[target_user_active.level.toString()]),
+                img: target_user_active_base_stats.img
             }
 
             await timer(2000);
@@ -128,7 +129,7 @@ module.exports = {
                 if (Math.ceil(Math.random() * 2) == 1){
                     initiator_duck.hp = initiator_duck.hp - target_user_duck.damamge + target_user_duck.tank_damge + target_user_duck.heal
                     target_user_duck.hp = target_user_duck.hp - target_user_duck.recoil
-                    attacker = `\`${targetUser.nickname ? targetUser.nickname : targetUser.user.globalName}'s ${target_user_duck.name}\` `
+                    attacker = `\`${targetUser.member.nickname ? targetUser.member.nickname : targetUser.user.globalName}'s ${target_user_duck.name}\` `
                     attacked = `\`${interaction.member.nickname ? interaction.member.nickname : interaction.user.globalName}'s ${initiator_duck.name}\` `
                     await timer(1000)
                     let battle_prompt = `-------\n${duck_battle_prompts(attacker, attacked)}`
@@ -138,7 +139,7 @@ module.exports = {
                 }else{
                     target_user_duck.hp = target_user_duck.hp - initiator_duck.damamge + initiator_duck.tank_damge + initiator_duck.heal
                     initiator_duck.hp = initiator_duck.hp - initiator_duck.recoil
-                    attacked = `\`${targetUser.nickname ? targetUser.nickname : targetUser.user.globalName}'s ${target_user_duck.name}\` `
+                    attacked = `\`${targetUser.member.nickname ? targetUser.member.nickname : targetUser.user.globalName}'s ${target_user_duck.name}\` `
                     attacker = `\`${interaction.member.nickname ? interaction.member.nickname : interaction.user.globalName}'s ${initiator_duck.name}\` `
                     await timer(1000)
                     let battle_prompt = `-------\n${duck_battle_prompts(attacker, attacked)}`
@@ -151,22 +152,33 @@ module.exports = {
             let winner_database;
             let winner_name;
             let winner_duck;
+            let winner_duck_stats;
             if (initiator_duck.hp <= 0){
                 winner_database = target_user
-                winner_name = targetUser.nickname ? targetUser.nickname : targetUser.user.globalName
+                winner_name = targetUser.member.nickname ? targetUser.member.nickname : targetUser.user.globalName
                 winner_duck = target_user_duck.name
+                winner_duck_stats = target_user_duck
                 console.log(`target-user won`)
             }else{
                 winner_database = initiator
                 winner_name = interaction.member.nickname ? interaction.member.nickname : interaction.user.globalName
                 winner_duck = initiator_duck.name
+                winner_duck_stats = initiator_duck
                 console.log(`initiator won`)
             }
 
             winner_database.battles_won += 1
             await winner_database.save()
 
+            const embed = new EmbedBuilder()
+                .setTitle(`Congratulations ${winner_name}!`)
+                .setDescription(`your friendship with ${winner_duck} has grown!`)
+                .setThumbnail(`${winner_duck_stats.img}`)
+
             interaction.channel.send(`-------\nIN THIS CONCLUSIVE QUACK OFF, \`${winner_name}\`'s \`${winner_duck}\` CAME OUT VICTORIOUS!\n-------`) 
+            interaction.channel.send({embeds:[embed]}) 
+
+            
             
         } catch (error) {
             console.log(`Error in hackoff.js ${error}`)
