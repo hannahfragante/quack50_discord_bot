@@ -18,6 +18,9 @@ const single_constants = require("../../global_constants/singleConstants.js");
 module.exports = async (client, message) => {
     // send message very n messages
     const n = single_constants["question_popper_n"];
+    const duck_n = single_constants["duck_popper_n"];
+    let random_n = Math.ceil(Math.random() * n)
+    let random_duck_n = Math.ceil(Math.random() * duck_n)
 
     let all_custom_commands = [];
     for (const custom_command in custom_commands) {
@@ -128,6 +131,8 @@ module.exports = async (client, message) => {
                 );
         }
 
+        
+
         //check the message count of the server
         // add 1 to database message count
         const queryMessageCount = {
@@ -135,23 +140,36 @@ module.exports = async (client, message) => {
         };
 
         let current_message_count;
+        let current_threshold_count;
+        let current_threshold;
+        let messageCountOutside;
 
         try {
             const messageCount = await MessageCounter.findOne(
                 queryMessageCount
             );
 
-            if (messageCount) {
-                messageCount.count += 1;
+            messageCountOutside = messageCount
 
+            if (messageCount) {
                 current_message_count = messageCount.count;
+                current_threshold = messageCount.question_message_count_threshold
+                current_threshold_count = messageCount.question_message_count_threshold_counter + 1
+
+                messageCount.count += 1;
+                messageCount.question_message_count_threshold_counter += 1
 
                 await messageCount.save();
             } else {
                 //create new count
                 const newCount = new MessageCounter({
                     guild_id: message.guild.id,
+                    question_message_count_threshold: random_n,
+                    duck_message_count_threshold: random_duck_n
                 });
+                current_message_count = 0
+                current_threshold_count = 0
+                current_threshold = random_n
 
                 await newCount.save();
                 console.log("new count created");
@@ -173,8 +191,15 @@ module.exports = async (client, message) => {
                 queryCurrentQuestion
             );
 
+                
+
             // send a question every n messages
-            if (current_message_count % n == 0) {
+            // if (current_message_count % n == 0) {
+            if (current_threshold_count == current_threshold) {
+                messageCountOutside.question_message_count_threshold = random_n
+                messageCountOutside.question_message_count_threshold_counter = 0
+                messageCountOutside.save()
+
                 if (currentQuestion && !currentQuestion.answered) {
                     //make the question embed for the unanswered question
                     //create embbed for the question
