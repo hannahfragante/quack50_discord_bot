@@ -127,7 +127,7 @@ module.exports = {
             let attacked;
             while (!(initiator_duck.hp <= 0 || target_user_duck.hp <=0)){
                 if (Math.ceil(Math.random() * 2) == 1){
-                    initiator_duck.hp = initiator_duck.hp - target_user_duck.damamge + target_user_duck.tank_damge + target_user_duck.heal
+                    initiator_duck.hp = initiator_duck.hp - target_user_duck.damamge + initiator_duck.tank_damge + initiator_duck.heal
                     target_user_duck.hp = target_user_duck.hp - target_user_duck.recoil
                     attacker = `\`${targetUser.member.nickname ? targetUser.member.nickname : targetUser.user.globalName}'s ${target_user_duck.name}\` `
                     attacked = `\`${interaction.member.nickname ? interaction.member.nickname : interaction.user.globalName}'s ${initiator_duck.name}\` `
@@ -137,7 +137,7 @@ module.exports = {
                     let hp_update = `\`${interaction.member.nickname ? interaction.member.nickname : interaction.user.globalName}'s ${initiator_duck.name}\` hp: ${initiator_duck.hp}\n\`${targetUser.nickname ? targetUser.nickname : targetUser.user.globalName}'s ${target_user_duck.name}\` hp: ${target_user_duck.hp}`
                     interaction.channel.send(`${hp_update}\n-------`)
                 }else{
-                    target_user_duck.hp = target_user_duck.hp - initiator_duck.damamge + initiator_duck.tank_damge + initiator_duck.heal
+                    target_user_duck.hp = target_user_duck.hp - initiator_duck.damamge + target_user_duck.tank_damge + target_user_duck.heal
                     initiator_duck.hp = initiator_duck.hp - initiator_duck.recoil
                     attacked = `\`${targetUser.member.nickname ? targetUser.member.nickname : targetUser.user.globalName}'s ${target_user_duck.name}\` `
                     attacker = `\`${interaction.member.nickname ? interaction.member.nickname : interaction.user.globalName}'s ${initiator_duck.name}\` `

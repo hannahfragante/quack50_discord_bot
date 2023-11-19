@@ -44,13 +44,15 @@ module.exports = async (client, message) => {
                 newDuckArray.push(duck);
             }
 
+            const duck_databse = await Duck.find({})
+
             if (player) {
                 let duckNumber = message.content.split(" ")[2];
 
                 if (duckNumber) {
                     if (isPositiveInteger(duckNumber)) {
                         let duckNumberInt = parseInt(duckNumber);
-                        if (duckNumberInt <= player.ducks.length) {
+                        if (duckNumberInt <= duck_databse.length) {
                             for (let i = 0; i < player.ducks.length; i++) {
                                 let duckDatabase = await Duck.findOne({
                                     name: player.ducks[i]["name"],

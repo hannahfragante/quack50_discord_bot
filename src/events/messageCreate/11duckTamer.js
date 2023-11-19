@@ -82,7 +82,7 @@ module.exports = async (client, message) => {
                             if (alreadyHasDuck){
 
                                 let duck = playerDucks[playerDuckIndex]
-                                if (duck['level'] <= 5){
+                                if (duck['level'] <= 6){
                                     duck['level'] += 1
                                 }
                                 duck['duplicates'] += 1
