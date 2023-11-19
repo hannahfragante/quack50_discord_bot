@@ -8,6 +8,9 @@ in life was to just say "quack". Essentially, the goal was you used that tool to
 Even though, it only replies quack, it helps you think/talk through what was going on with your program.
 I started off my discord bot with doing just that then I added a few silly features to it.
 
+## GITHUB LINK
+
+(github)[https://github.com/hannahfragante/quack50_discord_bot]
 
 ## Discord Invite Link
 
@@ -121,6 +124,3 @@ this (youtube playlist)[https://www.youtube.com/playlist?list=PLpmb-7WxPhe0ZVpH9
 (how to set up your own MongoDB ATLAS)[https://www.youtube.com/watch?v=edeNqzKvj0g&list=PLpmb-7WxPhe0ZVpH9pxT5MtC4heqej8Es&index=11]
 
 
-## TUTORIALS I WATCHED
-
-Advanced Event+Command Handler: https://www.youtube.com/watch?v=JEEcbVjLyr0&list=PLpmb-7WxPhe0ZVpH9pxT5MtC4heqej8Es&index=7
