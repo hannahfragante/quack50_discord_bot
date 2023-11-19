@@ -43,11 +43,13 @@ Game Function:
 
 - Player `xp` do not make your ducks stronger, it's only directly connected to how many questions you've answered and you gain titles after certain levels, those titles are as follows:
 
-**Level 1**: Baby Hacker
-**Level 10**: Junior Hacker
-**Level 20**: Intermediate Hacker
-**Level 50**: Senior Hacker
-**Level 100+**: TERMINATOR
+```
+Level 1: Baby Hacker
+Level 10: Junior Hacker
+Level 20: Intermediate Hacker
+Level 50: Senior Hacker
+Level 100+: TERMINATOR
+```
 
 - the amount of `xp` your earn is based on the difficulty of the question
 
@@ -73,11 +75,13 @@ Game Function:
 
 typing `dd -commands` will list ALL THE COMMANDS YOU CAN USE WITH THIS BOT
 
-**hp**: health
-**damage**: the amount of damage they have
-**recoil**: dmg taken every time they attack
-**tank damage**: amount of damage they tank every time they get hit
-**heal**: amount they heal for every time they get attacked
+```
+hp: health
+damage: the amount of damage they have
+recoil: dmg taken every time they attack
+tank damage: amount of damage they tank every time they get hit
+heal: amount they heal for every time they get attacked
+```
 
 ### That is pretty much for the bot, if you wanna run this locally and make your own changes or add you rown spins, keep reading!
 
