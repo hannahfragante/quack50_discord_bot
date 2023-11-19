@@ -338,7 +338,7 @@ module.exports = async (client, message) => {
                         choices: chosenQuestion["choices"],
                         answer: chosenQuestion["answer"],
                         difficulty: chosenQuestion["difficulty"],
-                        difficulty: chosenQuestion["language"],
+                        language: chosenQuestion["language"],
                     });
 
                     // send the new question for every n messages in a channel

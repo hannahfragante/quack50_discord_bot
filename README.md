@@ -14,7 +14,7 @@ I started off my discord bot with doing just that then I added a few silly featu
 
 ## Discord Invite Link
 
-Discord bot invite link: [invite]()
+Discord bot invite link: [invite](https://discord.com/api/oauth2/authorize?client_id=1173760699068055632&permissions=8&scope=applications.commands%20bot)
 
 - NOTE: i used a free version of a data space so if it stops working, it's probably full and you might have to run this bot locally, instructions for this later down this document.
 
