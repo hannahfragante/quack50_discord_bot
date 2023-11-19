@@ -34,5 +34,29 @@ module.exports = [
         base_tank_damage: 0,
         base_heal: 0,
         img: "https://i.imgur.com/PCtaG0O.png",
+    },
+    {
+        number: "4",
+        name: "Rave Duck",
+        passive:
+            "Rave Duck seem to always be having the time of it's life. \Rave Duck does 5 dmg while tanking incoming 5 damage",
+        base_hp: 20,
+        base_damage: 7,
+        base_recoil: 1,
+        base_tank_damage: 5,
+        base_heal: 0,
+        img: "https://i.imgur.com/qcPFqfa.jpg",
+    },
+    {
+        number: "5",
+        name: "Streamer Duck",
+        passive:
+            "Streamer duck is a gamer and has a valorant addiction lol. \Rave Duck does 3 dmg with 7 heal",
+        base_hp: 22,
+        base_damage: 3,
+        base_recoil: 0,
+        base_tank_damage: 0,
+        base_heal: 7,
+        img: "https://i.imgur.com/6YGxtqB.png",
     }
 ]
