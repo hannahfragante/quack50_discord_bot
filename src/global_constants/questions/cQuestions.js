@@ -80,26 +80,26 @@ module.exports = {
             question: `What will be the output of the following code snippet?`,
             is_program_question: true,
             program_question: `int main()
-            {
-                char str[] = "geeksforgeeks";
-                char *s1 = str, *s2 = str;	 
-                int i;
-                
-                for(i = 0; i < 7; i++)
-                {
-                    printf(" %c ", *str);
-                    ++s1;	 
-                }
-                
-                for(i = 0; i < 6; i++)
-                {
-                    printf(" %c ", *s2);
-                    ++s2;	 
-                }
-                
-                getchar();
-                return 0;
-            }
+{
+    char str[] = "geeksforgeeks";
+    char *s1 = str, *s2 = str;	 
+    int i;
+    
+    for(i = 0; i < 7; i++)
+    {
+        printf(" %c ", *str);
+        ++s1;	 
+    }
+    
+    for(i = 0; i < 6; i++)
+    {
+        printf(" %c ", *s2);
+        ++s2;	 
+    }
+    
+    getchar();
+    return 0;
+}
             `,
             choices: {
                 free_response: `please type what you think the output will be`,
@@ -113,19 +113,78 @@ module.exports = {
             question: `What will be the output of the following code snippet?`,
             is_program_question: true,
             program_question: `int main()
-            {
-                int x, y = 2, z, a;
-                if (x = y % 2)
-                    z = 2;
-                a = 2;
-                printf("%d %d ", z, x);
-                return 0;
-            }
+{
+    int x, y = 2, z, a;
+    if (x = y % 2)
+        z = 2;
+    a = 2;
+    printf("%d %d ", z, x);
+    return 0;
+}
             `,
             choices: {
                 free_response: `please type what you think the output will be`,
             },
             answer: `0 0`,
+            difficulty: "medium",
+            language: `c`
+        },
+        {
+            id: 8,
+            question: `What will be the output of the following code snippet?`,
+            is_program_question: true,
+            program_question: `int main()
+{
+    int a[10];
+    printf("%d",*a+1-*a+3);
+    return 0;
+}
+
+            `,
+            choices: {
+                free_response: `please type what you think the output will be`,
+            },
+            answer: `4`,
+            difficulty: "medium",
+            language: `c`
+        },
+        {
+            id: 9,
+            question: `What will be the output of the following code snippet?`,
+            is_program_question: true,
+            program_question: `#define prod(a,b) a*b
+int main()
+{
+    int x=3,y=4;
+    printf("%d",prod(x+2,y-1));
+    return 0;
+}
+            `,
+            choices: {
+                free_response: `please type what you think the output will be`,
+            },
+            answer: `10`,
+            difficulty: "medium",
+            language: `c`
+        },
+        {
+            id: 10,
+            question: `What will be the output of the following code snippet?`,
+            is_program_question: true,
+            program_question: `int main()
+{
+    char arr[] = {1, 2, 3};
+    char *p = arr;
+    printf(" %d ", sizeof(p));
+    printf(" %d ", sizeof(arr));
+    getchar();
+} 
+
+            `,
+            choices: {
+                free_response: `please type what you think the output will be`,
+            },
+            answer: `4 3`,
             difficulty: "medium",
             language: `c`
         },

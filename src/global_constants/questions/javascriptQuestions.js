@@ -96,12 +96,12 @@ document.write(a);
             question: `What will be the output of the following code snippet?`,
             is_program_question: true,
             program_question: `<script type="text/javascript" language="javascript">
-  
-            var a = "Scaler";
-            var result = a.substring(2, 4);
-            document.write(result);
-              
-            </script>`,
+
+var a = "Scaler";
+var result = a.substring(2, 4);
+document.write(result);
+
+</script>`,
             choices: {
                 free_response: `please type what you think the output will be`,
             },
@@ -114,11 +114,11 @@ document.write(a);
             question: `What will be the output of the following code snippet?`,
             is_program_question: true,
             program_question: `(function(){
-                setTimeout(()=> console.log(1),2000);
-                console.log(2);
-                setTimeout(()=> console.log(3),0);
-                console.log(4);
-               })();`,
+setTimeout(()=> console.log(1),2000);
+console.log(2);
+setTimeout(()=> console.log(3),0);
+console.log(4);
+})();`,
             choices: {
                 free_response: `please type what you think the output will be`,
             },
@@ -131,11 +131,11 @@ document.write(a);
             question: `What will be the output of the following code snippet?`,
             is_program_question: true,
             program_question: `(function(a){
-                return (function(){
-                  console.log(a);
-                  a = 6;
-                })()
-               })(21);`,
+return (function(){
+    console.log(a);
+    a = 6;
+})()
+})(21);`,
             choices: {
                 free_response: `please type what you think the output will be`,
             },
@@ -148,14 +148,14 @@ document.write(a);
             question: `What will be the output of the following code snippet?`,
             is_program_question: true,
             program_question: `function solve(arr, rotations){
-                if(rotations == 0) return arr;
-                for(let i = 0; i < rotations; i++){
-                  let element = arr.pop();
-                  arr.unshift(element);
-                }
-                return arr;
-               }
-               // solve([44, 1, 22, 111], 5);`,
+if(rotations == 0) return arr;
+for(let i = 0; i < rotations; i++){
+    let element = arr.pop();
+    arr.unshift(element);
+}
+return arr;
+}
+// solve([44, 1, 22, 111], 5);`,
             choices: {
                 free_response: `please type what you think the output will be`,
             },
