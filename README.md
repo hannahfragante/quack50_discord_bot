@@ -70,11 +70,6 @@ Level 100+: TERMINATOR
 - to change your active duck use command `dd -active <duck number which can be found from -myducks command>`
 
 - Every duck has these stats:
-
-### dd -commands
-
-typing `dd -commands` will list ALL THE COMMANDS YOU CAN USE WITH THIS BOT
-
 ```
 hp: health
 damage: the amount of damage they have
@@ -82,6 +77,64 @@ recoil: dmg taken every time they attack
 tank damage: amount of damage they tank every time they get hit
 heal: amount they heal for every time they get attacked
 ```
+
+
+### ALL BOT COMMANDS
+
+all of these commands are used like this: `dd <command>` where `<command>` are any of these list of commands:
+
+*SPECIAL DEBUGGER QUACK command*
+quack50's bread and butter ask quack50 debugging questions to help you figure out your coding problems!
+command: `dd <anything you wanna ask quack50 to help you debug :)>`
+
+*ANSWER commands*
+The answer commands is for answering randomly popped coding questions by quack50 in the server
+NOTE: this command is used as follows: `dd <command> <answer to a question>`
+commands: `-a` `-ans` `-answer`
+
+*INFORMATION commands*
+The information commands is for looking at your player info
+commands: `-i` `-info`
+
+*NEW PLAYER commands*
+The new player commands is for registering new hackers in quak50's database
+commands: `-hacker`
+
+*PLAYER DUCKS commands*
+The player ducks commands is to see all the ducks you have tamed
+commands: `-md` `-myducks`
+
+*DUCKS commands*
+The ducks commands is to see all the ducks in the database
+commands: `-d` `-ducks`
+
+*CHANGE ACTIVE DUCK commands*
+The change active duck commands is to change hacker's current active duck to use for quackoffs!
+NOTE: this command is used as follows: `dd <command> <duck number>` to figure out your duck's number use dd -myducks
+commands: `-active`
+
+*TAME commands*
+The tame duck commands is to tame wild ducks!
+NOTE: this command is used as follows: `dd <command> <duck name>`
+commands: `-tame` `-t`
+
+*COMMANDS commands*
+this commands is used to show all of quack50's commands!
+commands: `-commands`
+
+*quack50 command*
+this commands is used to send a link to quack50's documentation!
+commands: `-quack50`
+
+*SLASH COMMANDS*
+This command is to initiate a quackoff with someone
+`/quackoff <target-user>` where `<target-user>` is another valid player
+`/quack` just quack's back :)
+
+### dd -commands
+
+typing `dd -commands` will list ALL THE COMMANDS YOU CAN USE WITH THIS BOT
+
 
 ### That is pretty much for the bot, if you wanna run this locally and make your own changes or add you rown spins, keep reading!
 
