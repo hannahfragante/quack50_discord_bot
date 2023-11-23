@@ -65,7 +65,7 @@ module.exports = async (client, message) => {
                 await messageCount.save();
 
 
-                // if (messageCount.count % n == 0){
+                // if (messageCount.count % duck_n == 0){
                 if (current_threshold_count == current_threshold) {
                     messageCount.duck_message_count_threshold = random_duck_n
                     messageCount.duck_message_count_threshold_counter = 0

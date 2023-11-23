@@ -1,4 +1,4 @@
 module.exports = {
-    question_popper_n: 10,
-    duck_popper_n: 10,
+    question_popper_n: 30,
+    duck_popper_n: 30,
 };

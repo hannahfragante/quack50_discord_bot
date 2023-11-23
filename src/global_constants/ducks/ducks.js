@@ -56,7 +56,7 @@ module.exports = [
         base_damage: 3,
         base_recoil: 0,
         base_tank_damage: 0,
-        base_heal: 7,
+        base_heal: 2,
         img: "https://i.imgur.com/6YGxtqB.png",
     }
 ]
