@@ -89,7 +89,7 @@ command: `dd <anything you wanna ask quack50 to help you debug :)>`
 
 - *ANSWER commands*<br>
 The answer commands is for answering randomly popped coding questions by quack50 in the server
-NOTE: this command is used as follows: `dd <command> <answer to a question>`
+NOTE: this command is used as follows: `dd <command> <answer to a question>`<br>
 commands: `-a` `-ans` `-answer`
 
 - *INFORMATION commands*<br>
@@ -131,9 +131,6 @@ This command is to initiate a quackoff with someone<br>
 `/quackoff <target-user>` where `<target-user>` is another valid player<br>
 `/quack` just quack's back :)
 
-### dd -commands
-
-typing `dd -commands` will list ALL THE COMMANDS YOU CAN USE WITH THIS BOT
 
 
 ### That is pretty much for the bot, if you wanna run this locally and make your own changes or add you rown spins, keep reading!
