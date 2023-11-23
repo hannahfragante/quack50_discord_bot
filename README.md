@@ -83,52 +83,52 @@ heal: amount they heal for every time they get attacked
 
 all of these commands are used like this: `dd <command>` where `<command>` are any of these list of commands:
 
-- *SPECIAL DEBUGGER QUACK command* \n
+- *SPECIAL DEBUGGER QUACK command*<br> 
 quack50's bread and butter ask quack50 debugging questions to help you figure out your coding problems!
 command: `dd <anything you wanna ask quack50 to help you debug :)>`
 
-*ANSWER commands*
+- *ANSWER commands*<br>
 The answer commands is for answering randomly popped coding questions by quack50 in the server
 NOTE: this command is used as follows: `dd <command> <answer to a question>`
 commands: `-a` `-ans` `-answer`
 
-*INFORMATION commands*
-The information commands is for looking at your player info
+- *INFORMATION commands*<br>
+The information commands is for looking at your player info<br>
 commands: `-i` `-info`
 
-*NEW PLAYER commands*
-The new player commands is for registering new hackers in quak50's database
+- *NEW PLAYER commands*<br>
+The new player commands is for registering new hackers in quak50's database<br>
 commands: `-hacker`
 
-*PLAYER DUCKS commands*
-The player ducks commands is to see all the ducks you have tamed
+- *PLAYER DUCKS commands*<br>
+The player ducks commands is to see all the ducks you have tamed<br>
 commands: `-md` `-myducks`
 
-*DUCKS commands*
-The ducks commands is to see all the ducks in the database
+- *DUCKS commands*<br>
+The ducks commands is to see all the ducks in the database<br>
 commands: `-d` `-ducks`
 
-*CHANGE ACTIVE DUCK commands*
-The change active duck commands is to change hacker's current active duck to use for quackoffs!
-NOTE: this command is used as follows: `dd <command> <duck number>` to figure out your duck's number use dd -myducks
+- *CHANGE ACTIVE DUCK commands*<br>
+The change active duck commands is to change hacker's current active duck to use for quackoffs!<br>
+NOTE: this command is used as follows: `dd <command> <duck number>` to figure out your duck's number use dd -myducks<br>
 commands: `-active`
 
-*TAME commands*
-The tame duck commands is to tame wild ducks!
-NOTE: this command is used as follows: `dd <command> <duck name>`
+- *TAME commands*<br>
+The tame duck commands is to tame wild ducks!<br>
+NOTE: this command is used as follows: `dd <command> <duck name>`<br>
 commands: `-tame` `-t`
 
-*COMMANDS commands*
-this commands is used to show all of quack50's commands!
+- *COMMANDS commands*<br>
+this commands is used to show all of quack50's commands!<br>
 commands: `-commands`
 
-*quack50 command*
-this commands is used to send a link to quack50's documentation!
+- *quack50 command*<br>
+this commands is used to send a link to quack50's documentation!<br>
 commands: `-quack50`
 
-*SLASH COMMANDS*
-This command is to initiate a quackoff with someone
-`/quackoff <target-user>` where `<target-user>` is another valid player
+- *SLASH COMMANDS*<br>
+This command is to initiate a quackoff with someone<br>
+`/quackoff <target-user>` where `<target-user>` is another valid player<br>
 `/quack` just quack's back :)
 
 ### dd -commands
