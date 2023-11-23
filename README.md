@@ -83,7 +83,7 @@ heal: amount they heal for every time they get attacked
 
 all of these commands are used like this: `dd <command>` where `<command>` are any of these list of commands:
 
-*SPECIAL DEBUGGER QUACK command*
+- *SPECIAL DEBUGGER QUACK command* \n
 quack50's bread and butter ask quack50 debugging questions to help you figure out your coding problems!
 command: `dd <anything you wanna ask quack50 to help you debug :)>`
 
