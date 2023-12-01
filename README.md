@@ -1,5 +1,9 @@
 # QUACK50 DISCORD BOT
 
+#### Video Demo:  https://youtu.be/08jZkbQEmHc
+
+#### Description:
+
 quack50 is a Harvard CS50 inspired discord bot. This bot's purpose is to help you dubug your code, test your coding knowledge, tame wild ducks, and have your ducks quack if off(battle)! If the last bit sounds familiar, no it doesn't!
 
 I wanter to make something I have never done before but will also enjoy coding so I came up with this project! I hope you like it!
