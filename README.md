@@ -149,6 +149,11 @@ This command is to initiate a quackoff with someone<br>
 
 for this project, you need to have [node.js](https://nodejs.org/en/) installed
 
+NEXT RUN THIS:
+```bash
+npm install
+```
+
 NOTE: I also installed nodemon GLOBALLY so i can serve my bot locally, i suggest you do the same
 ```bash
 npm install -g nodemon
