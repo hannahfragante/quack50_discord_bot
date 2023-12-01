@@ -18,9 +18,7 @@ I started off my discord bot with doing just that then I added a few silly featu
 
 Discord bot invite link: [invite](https://discord.com/api/oauth2/authorize?client_id=1173760699068055632&permissions=8&scope=applications.commands%20bot)
 
-NOTE: if the bot is ofline then im not paying the online server anymore sorry you would have to host it yourself :( (insturctions below under "RUNNING LOCALLY")
-
-- NOTE: i used a free version of a data space so if it stops working, it's probably full and you might have to run this bot locally, instructions for this later down this document.
+- NOTE: if the bot is offline then im not paying the online server anymore sorry you would have to host it yourself :( (insturctions below under "RUNNING LOCALLY")
 
 ### How the bot works
 After inviting the bot to your account, you can start using its commands to use it!
